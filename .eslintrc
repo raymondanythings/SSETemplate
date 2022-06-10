@@ -1,0 +1,42 @@
+{
+	"extends": ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings"],
+	"parser": "babel-eslint",
+	"env": {
+		"node": true,
+    "browser": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"plugins": ["react", "jsx-a11y", "import"],
+	"rules": {
+		"comma-dangle": ["warn", "never"],
+		"indent": ["off", 4],
+		"quotes": ["warn", "single"],
+		"semi": ["warn", "never"],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx"]
+			}
+		],
+    "no-mixed-spaces-and-tabs": 0,
+		"max-len": 0,
+		"no-useless-escape": 0,
+		"eqeqeq": 0,
+		"no-unused-vars": 0,
+		"no-console": 0,
+		"linebreak-style": 0,
+		"no-unused-expressions": 0
+
+	},
+	"settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx","*.component.js"],
+                "moduleDirectory": ["node_modules", "src/"]
+            }
+        }
+    }
+}
